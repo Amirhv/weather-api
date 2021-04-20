@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Raleway', sans-serif;
+   background: #487eb0;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-areas: "search-city search-city" "box-1 box-2" "box-1 box-2" "box-1 box-3" "box-1 box-3";
+   grid-gap: 20px;
+   min-height: 80%;
+   width: 80%;
+
+   div {
+      background: #fff;
+      padding: 15px;
+
+      h1 {
+         font-size: 24px;
+      }
+
+      h2 {
+         font-size: 22px;
+         font-weight: 400;
+      }
+
+   }
+
+   #search-city {
+      grid-area: search-city;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .input {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         height: 90%;
+
+         input {
+            width: 90%;
+            margin-right: 5px;
+            margin-left: 5px;
+            height: 50px;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-family: inherit;
+         }
+
+         button {
+            color: #fff;
+            background: #44bd32;
+            font-family: inherit;
+            font-size: 16px;
+            margin-right: 5px;
+            margin-left: 5px;
+            height: 50px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:focus {
+               outline: none;
+            }
+
+            &:hover {
+               background: darken(#44bd32, 10);
+            }
+         }
+
+      }
+
+      h5 {
+         font-weight: 400;
+         color: #333;
+      }
+
+   }
+
+   #box-1 {
+      grid-area: box-1;
+   }
+
+   #box-2 {
+      grid-area: box-2;
+   }
+
+   #box-3 {
+      grid-area: box-3;
+   }
+
+}
+
+
+@media (max-width: 567px) {
+   body {
+      min-height: 100vh;
+   }
+
+   .grid-container {
+      display: grid;
+      grid-template-areas: "search-city search-city" "box-1 box-1" "box-1 box-1" "box-2 box-2" "box-2 box-2" "box-3 box-3" "box-3 box-3";
+      grid-gap: 20px;
+      height: 80%;
+      width: 80%;
+
+      div {
+         background: #fff;
+         padding: 15px;
+      }
+
+      #search-city {
+         grid-area: search-city;
+      }
+
+      #box-1 {
+         grid-area: box-1;
+      }
+
+      #box-2 {
+         grid-area: box-2;
+      }
+
+      #box-3 {
+         grid-area: box-3;
+      }
+
+   }
+}
